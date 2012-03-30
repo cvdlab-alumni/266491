@@ -58,3 +58,5 @@ var mapping = function(p) {
 };
 /* mappa ritorna nuovo dominio MAP(funzione mapping)(dominio da mappare) */
 var mapped = MAP(mapping)(dominio);
+
+/*ahahahahahah*/
