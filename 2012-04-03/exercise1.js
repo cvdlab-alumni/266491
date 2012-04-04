@@ -10,10 +10,9 @@
 
 // perimetro mappa
 var externalWallsPoints = [[38.9,1],[39,1],[39,0],[0,0],[0,2],[1,2],[1,22],
-													[9,22],[9,17],[39,17],[39,16],[51,16],
-													[51,6],[52,6],[52,4],
-													[38.9,4]
-													];
+[9,22],[9,17],[39,17],[39,16],[51,16],
+[51,6],[52,6],[52,4],
+[38.9,4]];
 var externalWalls = POLYLINE(externalWallsPoints);
 
 //piscina grande
@@ -49,8 +48,7 @@ var internalWall6 = POLYLINE(internalWall6Points);
 var internalWall7Points = [[30,13.7],[40,13.7]];
 var internalWall7 = POLYLINE(internalWall7Points);
 var internalWalls = STRUCT([internalWall1,internalWall2,internalWall3,internalWall4,
-	internalWall5,internalWall6,internalWall7
-												 ]);
+	internalWall5,internalWall6,internalWall7]);
 // perimetro stanza interna
 var internalRoomPoints = [[37.7,16],[47,16],[47,5],[30,5]];
 var internalRoom = POLYLINE(internalRoomPoints);
@@ -100,5 +98,6 @@ var benchPoints = [[7.8,14.2],[7.8,14.7],[22.2,14.7],[22.2,14.2],[7.8,14.2]];
 var bench = POLYLINE(benchPoints);
 
 //piantina completa
-var plan = STRUCT([externalWalls,bigPool,shop,adminRoom,internalWalls,internalRoom,smallPool,steps,pillars,bench]);
+var plan = STRUCT([externalWalls,bigPool,shop,adminRoom,internalWalls,
+	internalRoom,smallPool,steps,pillars,bench]);
 DRAW(plan);

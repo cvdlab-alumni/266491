@@ -35,8 +35,8 @@ COLOR([0.85,0.53,0.1])(chairSit2);
 
 //sedia completa
 var chair3D = T([0,1,2])([1.5,12,1])
-						  (S([0,1,2])([1.3,1.3,1.3])
-						  (STRUCT([chairLegs,beams1,beams2,backSit1,backSit2,backSit3,chairSit1,chairSit2])));
+	(S([0,1,2])([1.3,1.3,1.3])
+		(STRUCT([chairLegs,beams1,beams2,backSit1,backSit2,backSit3,chairSit1,chairSit2])));
 
 
 /**
@@ -53,7 +53,7 @@ var floor7 = T([0,1])([1,17])(SIMPLEX_GRID([[8],[5],[1]]));
 var floor8 = T([0,1])([39,4])(SIMPLEX_GRID([[13],[1],[1]]));
 var floor9 = T([0,1])([51,5])(SIMPLEX_GRID([[1],[1],[1]]));
 var floor3D = COLOR([0.93,0.84,0.69])
-						 (STRUCT([floor1, floor2, floor3,floor4, floor5, floor6,floor7, floor8, floor9]));
+	(STRUCT([floor1, floor2, floor3,floor4, floor5, floor6,floor7, floor8, floor9]));
 
 //piscine
 var bigPool3D = T([0,1])([1,1])(SIMPLEX_GRID([[20],[9],[0.8]]));
@@ -72,7 +72,7 @@ var wall8 = T([0,1,2])([41.3,4.75,0])(SIMPLEX_GRID([[9.7],[0.25],[4]]));
 var wall9 = T([0,1,2])([25.2,7.2,1])(SIMPLEX_GRID([[9.6],[0.25],[3]]));
 var wall10 = T([0,1,2])([37.2,11.4,1])(SIMPLEX_GRID([[5.75],[0.25],[3]]));
 var walls3D =  COLOR([0.93,0.84,0.69])
-							(STRUCT([wall1, wall2, wall3, wall4, wall5, wall6, wall7, wall8, wall9, wall10]));
+	(STRUCT([wall1, wall2, wall3, wall4, wall5, wall6, wall7, wall8, wall9, wall10]));
 
 //mura di vetro
 var glassWall1AxisX = SIMPLEX_GRID([[0.1],REPLICA(2)([2.7]),[0.05]]);
@@ -111,14 +111,12 @@ var stair5 = T([0,2])([-0.4,0.13])(stair4);
 var stair6 = T([0,2])([-0.4,0.13])(stair5);
 var stair7 = T([0,2])([-0.4,0.13])(stair6);
 var stairs3D = COLOR([0.93,0.84,0.69])
-							(T([0,1])([38.4,1])
-							(STRUCT([stair1,stair2,stair3,stair4,stair5,stair6,stair7])));
+	(T([0,1])([38.4,1])
+		(STRUCT([stair1,stair2,stair3,stair4,stair5,stair6,stair7])));
 
 //colonne
-var pillars3D = COLOR([0.51,0.51,0.45])(T([0,1])([26,6.8])(SIMPLEX_GRID([REPLICA(4)([0.15,-6.2]),
-	                         [0.15,-7,0.15],
-	                         [3,1]
-              ])));
+var pillars3D = COLOR([0.51,0.51,0.45])(T([0,1])([26,6.8])(SIMPLEX_GRID
+	([REPLICA(4)([0.15,-6.2]),[0.15,-7,0.15],[3,1]])));
 
 // panchina
 var benchLegs = T([0,1,2])([8, 14.2, 1])(SIMPLEX_GRID([REPLICA(8)([0.4,-1.7]),[0.4],[0.4]]));
@@ -131,5 +129,6 @@ var smallRoof = T([0,1,2])([0.5,13.2,4])(SIMPLEX_GRID([[9.5],[10],[0.25]]));
 var roofs3D = COLOR([0.16,0.14,0.13])(STRUCT([bigRoof,smallRoof]));
 
 // struttura completa con sedia
-var pavillionBarcelona = STRUCT([floor3D,pools3D, walls3D,glassWalls3D,stairs3D,pillars3D,bench3D,roofs3D,chair3D]);
+var pavillionBarcelona = STRUCT([floor3D,pools3D, walls3D,glassWalls3D,
+	stairs3D,pillars3D,bench3D,roofs3D,chair3D]);
 DRAW(pavillionBarcelona);

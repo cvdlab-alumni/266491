@@ -80,10 +80,7 @@ var stair7 = T([0,2])([-0.4,0.13])(stair6);
 var stairs3D = T([0,1])([38.4,1])(STRUCT([stair1,stair2,stair3,stair4,stair5,stair6,stair7]));
 
 // colonne
-var pillars3D = T([0,1])([26,6.8])(SIMPLEX_GRID([REPLICA(4)([0.15,-6.2]),
-	                         [0.15,-7,0.15],
-	                         [3,1]
-              ]));
+var pillars3D = T([0,1])([26,6.8])(SIMPLEX_GRID([REPLICA(4)([0.15,-6.2]),[0.15,-7,0.15],[3,1]]));
 
 // panchina
 var benchLegs = T([0,1,2])([8, 14.2, 1])(SIMPLEX_GRID([REPLICA(8)([0.4,-1.7]),[0.4],[0.4]]));
