@@ -33,7 +33,7 @@ DRAW (airstrip);
 //----aircraft----
 
 // fuselage
-var domain = DOMAIN([[0,1],[0,1]])([40,40]);
+var domain = DOMAIN([[0,1],[0,1]])([30,30]);
 
 //fuselage
 var p0fus = [[0,1 , 0],[1,1,0], [1, 0, 0], [1, -2.4, 0], [-1.2, -2.4, 0], 
@@ -346,5 +346,18 @@ var surf2wing2 = MAP(bigWing22)(domain);
 // ala finale
 var bigWingTot2 = R([1,2])(-PI/17)(T([0,1,2])([0,-5.5,7])(R([0,2])(-PI/2)(COLOR([1,0.7,0, 1])(STRUCT([surfwing2,surf2wing2])))));
 
-var aircraft = T([2])([5])(R([1,2])(PI/2)(STRUCT([fuselage,stabilizers,bigWingTot2,bigWingTot])));
+//wheels
+
+var wheel = COLOR([0,0,0])(TORUS_SOLID([0.1,0.8])([10,20,10]));
+var wheelAX =CUBOID([0.2,0.2,0.8]);
+var wheelAY = T([1,2])([0,0.8])(CUBOID([0.2,3,0.2]));
+var wheelAxis = COLOR([1, 0.7, 0])(STRUCT([wheelAY,wheelAX]));
+var wheel1 =T([0,1,2])([-8,-5,12])(R([0,2])(PI/2)(STRUCT([wheel,wheelAxis])));
+
+var wheel2 =T([0,1,2])([7,-5,12])(R([0,2])(-PI/2)(STRUCT([wheel,wheelAxis])));
+
+
+var wheel3 =T([0,1,2])([0.2,-0.5,31])(R([0,2])(-PI/2)(S([0,1,2])([0.4,0.4,0.4])(STRUCT([wheel,wheelAxis]))));
+
+var aircraft = T([2])([7])(R([1,2])(PI/2)(STRUCT([fuselage,stabilizers,bigWingTot2,bigWingTot,wheel1,wheel2,wheel3])));
 DRAW(aircraft);

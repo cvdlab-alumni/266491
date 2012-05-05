@@ -7,7 +7,7 @@
 * Produce the model of a single wing in a local coordinate system.
 */
 
-var domain = DOMAIN([[0,1],[0,1]])([60,60]);
+var domain = DOMAIN([[0,1],[0,1]])([40,40]);
 
 var p0wing = [[9,0,0],[0,5,0],[0,0,0],[4,2,0],[9,0,0]];
 

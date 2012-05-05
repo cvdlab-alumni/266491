@@ -9,7 +9,7 @@
 */
 
 //vertical stabilizer
-var domain = DOMAIN([[0,1],[0,1]])([60,60]);
+var domain = DOMAIN([[0,1],[0,1]])([40,40]);
 
 var vs = [[0,0,0],[0.3,4,0],[2,15,0],[5.5,5.5,0],[10,1.5,0],[6,0,0],[0,0,0]];
 vs1 = vs.map(function (p) {return [p[0], p[1], p[2]+0.1]});

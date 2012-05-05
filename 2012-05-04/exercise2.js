@@ -7,7 +7,7 @@
 * Produce the model of the fuselage (local coordinate system).
 */
 
-var domain = DOMAIN([[0,1],[0,1]])([60,60]);
+var domain = DOMAIN([[0,1],[0,1]])([40,40]);
 
 //fuselage
 var p0fus = [[0,1 , 0],[1,1,0], [1, 0, 0], [1, -2.4, 0], [-1.2, -2.4, 0], 
@@ -95,4 +95,3 @@ var glass = COLOR([0.69,0.87,0.9,0.98])(cockpit);
 // fuselage final
 var fuselage = STRUCT([surfFus,propellerTot,glass]);
 DRAW(fuselage);
-
