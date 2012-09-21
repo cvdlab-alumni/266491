@@ -883,7 +883,7 @@ var drawHalfHouse = function(){
 	if (halfHouseIsDraw){
 		CANCEL(leftHouse);
 		DRAW(leftHouse);
-		fullHouseIsDraw = true;
+		fullHouseIsDraw = false;
 	}
 	else { 
 		CANCEL(fullHouse);
@@ -906,6 +906,7 @@ var drawFullHouse = function(){
 		halfHouseIsDraw = false;
 		DRAW(fullHouse);
 		fullHouseIsDraw = true;
+		modelTemp = fullHouse.clone();
 	}
 	else { 
 		CANCEL(fullHouse);
