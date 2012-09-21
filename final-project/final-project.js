@@ -7,14 +7,14 @@
  * 3D model of Villa Chiericati (Vancimuglio, Vicenza, Italy)
  */
 
-//Domini
+//domini
 var domain1 = DOMAIN([[0,1],[0,1],[0,1]])([12,1,1]);
 var domain2 = DOMAIN([[0,1],[0,2*PI]])([20,20,1]);
 var domain3 = DOMAIN([[0,1],[0,1],[0,1]])([20,1,1]);
 var domain4 = DOMAIN([[0,1],[0,1]])([5,15]);
 
 
-//Colors
+//colors
 var ground_color = [10/255,143/255,23/255,1];
 var main_color = [248/255,232/255,213/255,1];
 var roof_color = [218/255,128/255,91/255,1];
