@@ -1004,3 +1004,30 @@ var addExtWalls = function(){
 		fullHouse.structs[2].structs[0].structs[8].structs[2].show();
 	}
 };
+
+/**
+ * Evidenzia le decorazioni
+ * 
+ */
+var highlightsDec = function(){
+	 var highlights_color=[253/255,192/255,8/255,1];
+
+	if (halfHouseIsDraw){
+
+		leftHouse.structs[8].color(highlights_color);
+	}
+
+	if(fullHouseIsDraw){
+		fullHouse.structs[0].structs[8].color(highlights_color);
+		fullHouse.structs[2].structs[0].structs[8].color(highlights_color);
+
+	}
+};
+
+/**
+ * Ripristina i colori delle decorazioni
+ * 
+ */
+var noHighlightsDec = function(){
+	viewExternal();
+};
